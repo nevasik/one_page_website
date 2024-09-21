@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  odnostranishka:
+    ports:
+      - "8081:8081"
+    build:
+      context: .
+    restart: always
+    volumes:
+      - receipt_volume:/app/receipts
+    container_name: odnostranishka
+    logging:
+      driver: json-file
+      options:
+        max-size: "100m"
+        max-file: "5"
+
+volumes:
+  receipt_volume:

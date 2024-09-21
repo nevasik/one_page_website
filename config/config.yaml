@@ -1,0 +1,4 @@
+server:
+  baseURL: "http://odnostranishka/"
+  host: "localhost"
+  port: "8081"
